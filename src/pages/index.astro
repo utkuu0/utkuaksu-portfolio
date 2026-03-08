@@ -366,8 +366,16 @@ const skills = [
       ).value.trim();
 
       // Basic validation
-      if (name.length < 2 || message.length < 10) {
-        if (submitText) submitText.textContent = "Lütfen alanları doldurun";
+      if (name.length < 2) {
+        if (submitText) submitText.textContent = "Lütfen adınızı girin";
+        if (submitBtn) submitBtn.disabled = false;
+        setTimeout(() => {
+          if (submitText) submitText.textContent = "Mesaj Gönder";
+        }, 2000);
+        return;
+      }
+      if (message.length < 5) {
+        if (submitText) submitText.textContent = "Mesajınız çok kısa";
         if (submitBtn) submitBtn.disabled = false;
         setTimeout(() => {
           if (submitText) submitText.textContent = "Mesaj Gönder";
