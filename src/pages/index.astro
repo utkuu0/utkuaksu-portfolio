@@ -41,6 +41,14 @@ const projects = [
     github: "https://github.com/utkuu0/portfoy",
     image: "/projects/portfoy.png",
   },
+  {
+    title: "Sportify",
+    description:
+      "Sporcular için geliştirilmiş kişisel beslenme takip uygulaması. Kalori ve makro takibi, vitamin/mineral eksikliği uyarıları, spora özel yemek önerileri ve hedef bazlı motivasyon mesajları.",
+    tags: ["Kotlin", "Jetpack Compose", "MVVM", "Hilt", "Room", "Retrofit"],
+    github: "https://github.com/utkuu0/Sportify",
+    image: "/projects/sportify.png",
+  },
 ];
 
 const skills = [
@@ -192,8 +200,14 @@ const skills = [
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          {projects.map((project) => <ProjectCard {...project} />)}
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {
+            projects.map((project) => (
+              <div class="h-full">
+                <ProjectCard {...project} />
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
