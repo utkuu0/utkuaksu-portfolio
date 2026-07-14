@@ -23,7 +23,7 @@ const projects = [
       "Modern Android teknoloji haberleri uygulaması. Jetpack Compose UI, Clean Architecture, MVVM pattern, Room ile offline destek, WorkManager ile günlük bildirimler, karanlık mod ve pull-to-refresh özellikleri.",
     tags: ["Kotlin", "Jetpack Compose", "MVVM", "Room", "Hilt"],
     github: "https://github.com/utkuu0/newsApp",
-    image: "/projects/technews.png",
+    images: ["/projects/technews.png"],
   },
   {
     title: "FinanssHub",
@@ -31,7 +31,7 @@ const projects = [
       "Anlık döviz kurlarını takip edebileceğiniz Android uygulaması. API entegrasyonu ile güncel kur bilgileri, temiz ve kullanıcı dostu arayüz tasarımı.",
     tags: ["Kotlin", "Android", "API"],
     github: "https://github.com/utkuu0/FinanssHub",
-    image: "/projects/finansshub.png",
+    images: ["/projects/finansshub.png"],
   },
   {
     title: "Portföy",
@@ -39,7 +39,7 @@ const projects = [
       "Astro framework ile geliştirilmiş kişisel portföy sitesi. Türkçe/İngilizce çoklu dil desteği, responsive tasarım, SEO optimizasyonu ve modern glassmorphism UI.",
     tags: ["Astro", "TypeScript", "CSS"],
     github: "https://github.com/utkuu0/portfoy",
-    image: "/projects/portfoy.png",
+    images: ["/projects/portfoy.png"],
   },
   {
     title: "Sportify",
@@ -47,7 +47,7 @@ const projects = [
       "Sporcular için geliştirilmiş kişisel beslenme takip uygulaması. Kalori ve makro takibi, vitamin/mineral eksikliği uyarıları, spora özel yemek önerileri ve hedef bazlı motivasyon mesajları.",
     tags: ["Kotlin", "Jetpack Compose", "MVVM", "Hilt", "Room", "Retrofit"],
     github: "https://github.com/utkuu0/Sportify",
-    image: "/projects/sportify.png",
+    images: ["/projects/sportify.png"],
   },
 ];
 
@@ -184,7 +184,7 @@ const skills = [
     </section>
 
     <!-- Projects Section -->
-    <section id="projeler" class="py-24 px-6">
+    <section id="projeler" class="pt-24 pb-48 px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -200,10 +200,10 @@ const skills = [
           </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="projects-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {
             projects.map((project) => (
-              <div class="h-full">
+              <div class="project-card-slot">
                 <ProjectCard {...project} />
               </div>
             ))
